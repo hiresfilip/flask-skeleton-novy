@@ -38,7 +38,7 @@ def jgdfjksdghfjksd():
         if(form.oo.data ==1 and form.obrazec.data ==2):
             return str(form.a.data)*(form.b.data)
         if(form.oo.data ==1 and form.obrazec.data ==3):
-            return str(((form.a.data)*math.sqrt(form.a.data*form.a.data-(form.c.data*form.c.data)/2))/2)
+            return str(((form.a.data)*math.sqrt(form.a.data*form.a.data-((form.c.data*form.c.data)/2)))/2)
         if(form.oo.data ==2 and form.obrazec.data ==1):
             return str(4*form.a.data)
         if(form.oo.data == 2 and form.obrazec.data == 2):
