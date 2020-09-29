@@ -33,16 +33,28 @@ def Formular_filiph():
 def jgdfjksdghfjksd():
     form = formfiliph2()
     if form.validate_on_submit():
-        if(form.oo.data ==1 and form.obrazec.data ==1):
-            return str(form.a.data)*(form.a.data)
-        if(form.oo.data ==1 and form.obrazec.data ==2):
-            return str(form.a.data)*(form.b.data)
-        if(form.oo.data ==1 and form.obrazec.data ==3):
-            return str(((form.a.data)*math.sqrt(form.a.data*form.a.data-((form.c.data*form.c.data)/2)))/2)
-        if(form.oo.data ==2 and form.obrazec.data ==1):
-            return str(4*form.a.data)
-        if(form.oo.data == 2 and form.obrazec.data == 2):
-            return str(2*form.a.data + 2*form.b.data)
-        if (form.oo.data == 2 and form.obrazec.data == 3):
-            return str(form.a.data + form.b.data + form.c.data)
+        return "OK"
+        '''obvod ctverec
+        if int(form.oo.data) == 1 and int(form.obrazec.data) == 1:
+            hodnota = str(4*form.a.data)
+            return render template("public/vystupnihodnoty.tmpl")
+        if int(form.oo.data) == 1 and int (form.obrazec.data == 2):
+            return str((form.a.data) * (form.b.data))
+        if int (form.oo.data) == 1 and int (form.obrazec.data == 3):
+            return str(((form.a.data) * math.sqrt(form.a.data * form.a.data - ((form.c.data * form.c.data) / 2))) / 2)
+        if int (form.oo.data == 2) and int (form.obrazec.data == 1):
+            return str(4 * form.a.data)
+        if int (form.oo.data == 2) and int (form.obrazec.data == 2):
+            return str(2 * form.a.data + 2 * form.b.data)
+        if int (form.oo.data) == 2 and int (form.obrazec.data == 3):
+            return str(form.a.data + form.b.data + form.c.data)'''
     return render_template("public/formularfiliptest.tmpl", form=form)
+
+
+@blueprint.route("/simple_chart")
+def chart():
+    legend = 'Monthly Data'
+    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
+    values = [10, 9, 8, 7, 6, 4, 7, 8]
+    return render_template('public/graf.tmpl', values=values, labels=labels, legend=legend)
+

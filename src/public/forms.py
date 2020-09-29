@@ -52,5 +52,6 @@ class formfiliph2(Form):
     a=FloatField("Strana a:", validators=[[NumberRange (min=0, message="Hodnota vetsi ZERO")], [InputRequired(message="Hodnota povinna")]])
     b=FloatField("Strana b:", validators=[[NumberRange (min=0, message="Hodnota vetsi ZERO")], [InputRequired(message="Hodnota povinna")]])
     c=FloatField("Strana c:", validators=[[NumberRange (min=0, message="Hodnota vetsi ZERO")], [InputRequired(message="Hodnota povinna")]])
-    oo=SelectField("Typ vypoctu", choices=[(1, "Obvod"), (2, "Obsah")], default=1)
-    obrazec = SelectField("Typ vypoctu", choices=[(1, "Ctverec"), (2, "Obdelnik"), (3,"Trojuhelnik")], default=1)
+    oo=SelectField("Typ vypoctu", choices=[("1", "Obvod"), ("2", "Obsah")], default="1")
+    obrazec = SelectField("Typ vypoctu", choices=[("1", "Ctverec"), ("2", "Obdelnik"), ("3","Trojuhelnik")], default="1")
+
